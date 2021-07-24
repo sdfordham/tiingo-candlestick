@@ -46,5 +46,5 @@ if __name__ == "__main__":
                         help="add a volume plot")
 
     args = vars(parser.parse_args())
-    args = {"token": token, **args}
+    args["token"] = token
     main(**args)
