@@ -5,6 +5,7 @@ import os
 
 from tiingo import TiingoRequest, plot_candlestick
 
+
 def main(token: str,
          symbol: str,
          date_from: dt.datetime,
@@ -17,13 +18,14 @@ def main(token: str,
     response = request.get(token=token)
     plot_candlestick(response, mav=mav, volume=volume)
 
+
 if __name__ == "__main__":
     from dotenv import load_dotenv
 
     load_dotenv()
     token = os.environ.get("TOKEN")
 
-    parser = ArgumentParser(description='Plot a candlestick chart using the Tiingo API')
+    parser = ArgumentParser(description="Plot a candlestick chart using the Tiingo API")
     parser.add_argument("symbol", help="Tiingo symbol")
     parser.add_argument("--from",
                         metavar="YYYY-MM-DD",

@@ -51,8 +51,8 @@ class TiingoRequest:
 
     def _make_header(self, token: str) -> dict:
         return {
-            'Content-Type': 'application/json',
-            'Authorization': 'Token ' + token
+            "Content-Type": "application/json",
+            "Authorization": "Token " + token
         }
 
     def _make_payload(self) -> dict:
