@@ -6,7 +6,7 @@ Generate candlestick plots using [Tiingo](https://www.tiingo.com/) API and [mplf
 
 Create a `.env` file in the folder with the line: `TOKEN={your Tiingo API token}`.
 
-```
+```console
 cli.py [-h] [--from YYYY-MM-DD] [--to YYYY-MM-DD] [--mav MAV [MAV ...]] [--volume] symbol
 
 positional arguments:
@@ -22,8 +22,8 @@ optional arguments:
 
 ## Example
 
-```
+```terminal
 python cli.py aapl --from 2021-01-01 --to 2021-06-01 --mav 1 7 14 --volume
 ```
 
-<img src="aapl.png" width="500">
+<p align="center"><img src="aapl.png" width="500"/></p>

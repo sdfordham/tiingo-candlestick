@@ -9,6 +9,7 @@ import requests
 import pandas as pd
 import mplfinance as mpf
 
+
 @dataclass
 class TiingoRow:
     symbol: str
@@ -29,11 +30,12 @@ class TiingoRow:
 
 class TiingoRequest:
     _base_url = "https://api.tiingo.com/tiingo/"
+
     def __init__(self,
                  symbol: str,
                  date_from: dt.datetime,
                  date_to: Optional[dt.datetime] = None,
-                 resample_freq: Optional[str] = "daily") -> None:
+                 resample_freq: str = "daily") -> None:
         self.symbol = symbol
         self.date_from = date_from
         self.date_to = date_to
