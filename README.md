@@ -22,7 +22,7 @@ optional arguments:
 
 ## Example
 
-```terminal
+```console
 python cli.py aapl --from 2021-01-01 --to 2021-06-01 --mav 1 7 14 --volume
 ```
 
