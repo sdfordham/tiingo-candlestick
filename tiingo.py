@@ -41,7 +41,7 @@ class TiingoRequest:
 
     def get(self, token: str) -> list[TiingoRow]:
         _header = self._make_header(token)
-        _args = ["daily/", self.symbol + "/", "prices/"]
+        _args = [self.resample_freq + "/", self.symbol + "/", "prices/"]
         _payload = self._make_payload()
         full_url = reduce(urljoin, _args, self._base_url)
         response = requests.get(full_url, headers=_header, params=_payload)
